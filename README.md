@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Projet de refonte du site Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Contexte du projet
 
-## Available Scripts
+En tant que développeur front-end freelance pour Kasa, une entreprise leader de location d'appartements entre particuliers en France, j'ai eu l'opportunité de contribuer à un projet majeur de refonte technologique. 
+Avec plus de 500 annonces postées chaque jour, Kasa est une référence notable à ajouter à son portfolio.
 
-In the project directory, you can run:
+## Objectifs du projet
 
-### `npm start`
+Le site actuel de Kasa, codé en ASP.NET il y a plus de 10 ans, sera entièrement refondu avec une stack JavaScript moderne : 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- NodeJS pour le back-end
+- React pour le front-end.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Je suis responsable de démarrer et de développer l'application en React, en suivant les maquettes Figma responsives fournies.
 
-### `npm test`
+## Consignes et ressources
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Back-end et données
 
-### `npm run build`
+Le recrutement pour le développement back-end est en cours. En attendant, je dois utiliser un fichier JSON contenant les 20 dernières annonces pour construire le front-end.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Contraintes techniques
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Utiliser Create React App ou un autre bundler comme Vite.
+- Suivre les coding guidelines de Kasa.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Design et fonctionnalités
 
-### `npm run eject`
+Les maquettes Figma sont organisées en composants pour faciliter l'intégration avec React.
+Utiliser les prototypes Figma pour les animations et les interactions (menus déroulants, galerie d'images).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Fonctionnalités spécifiques :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Galerie d'images : Navigation circulaire (la première image après la dernière et inversement).
+- Collapse : Initialement fermé, ouverture/fermeture au clic.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Technologies et pratiques recommandées
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Utiliser Sass pour générer les styles CSS.
+Intégrer des animations CSS pour le menu déroulant.
