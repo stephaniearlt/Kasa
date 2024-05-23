@@ -1,0 +1,38 @@
+.collapse {
+    width: 1023px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--main);
+    height: 52px;
+    padding: 0 15px;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--white)
+    }
+
+    .chevron {
+        width: 24px;
+        fill: var(--white);
+        cursor: pointer;
+    }
+}
+
+.collapse-content {
+    font-weight: 400;
+    font-size: 1.125rem;
+    background-color: var(--grey);
+    padding: 15px;
+
+    open {
+        display: block;
+    }
+}

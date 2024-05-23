@@ -28,7 +28,7 @@ Le recrutement pour le développement back-end est en cours. En attendant, je do
 # Design et fonctionnalités
 
 Les maquettes Figma sont organisées en composants pour faciliter l'intégration avec React.
-Utiliser les prototypes Figma pour les animations et les interactions (menus déroulants, galerie d'images).
+Les prototypes Figma permettent de visualiser les animations et les interactions (menus déroulants, galerie d'images).
 
 # Fonctionnalités spécifiques :
 

@@ -1,0 +1,19 @@
+// Centrage horizontal et vertical des éléments
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Points de rupture réactifs pour les médias
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $breakpoint == tablet {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $breakpoint == desktop {
+    @media (min-width: 992px) { @content; }
+  }
+}

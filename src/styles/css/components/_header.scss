@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 5%;
+}
+
+.logo-header {
+    height: 68px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+
+    li {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    a {
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    a.active {
+        text-decoration: underline;
+    }
+}

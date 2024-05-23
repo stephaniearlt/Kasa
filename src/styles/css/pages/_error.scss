@@ -1,0 +1,25 @@
+.error-content {
+    @include flex-center;
+    flex-direction: column;
+
+    h1 {
+        font-weight: 700;
+        font-size: 18rem;
+        color: var(--main)
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 2.25rem;
+        color: var(--main);
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+}
+
+.error-link {
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-decoration-line: underline;
+    color: black;
+}
