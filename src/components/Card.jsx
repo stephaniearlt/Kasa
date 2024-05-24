@@ -1,13 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/css/style.css';
 
-function Card() {
+const Card = ({ title, cover }) => {
   return (
-    <Link>
-        <div>A compléter</div>
-    </Link>
-  )
-}
+    <div className="card">
+      <img src={cover} alt={title} className="card-cover" />
+      <h2 className="card-title">{title}</h2>
+    </div>
+  );
+};
 
-export default Card
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+};
+
+export default Card;

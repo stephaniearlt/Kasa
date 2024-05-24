@@ -17,6 +17,8 @@
 body {
   font-family: "Montserrat", sans-serif;
   max-width: 1440px;
+  width: 1240px;
+  min-width: 320px;
   margin: auto;
 }
 
@@ -28,9 +30,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 100vh;
 }
 
@@ -44,19 +43,83 @@ a {
 
 .banner {
   position: relative;
-  width: 90%;
-  max-width: 1440px;
   height: 223px;
   margin-left: 5%;
   margin-right: 5%;
 }
-
 .banner img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 25px;
+}
+.banner h1 {
+  position: absolute;
+  width: 90%;
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 25px;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .card-cover {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0 20px 20px 20px;
+  color: var(--white);
+  z-index: 1;
+  /* Ensure the title is above the gradient */
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), color-stop(60%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 60%);
+  border-radius: 10px;
+  z-index: 0;
 }
 
 .collapse {
@@ -96,6 +159,8 @@ a {
   font-size: 1.125rem;
   background-color: var(--grey);
   padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .collapse-content open {
   display: block;
@@ -165,8 +230,29 @@ a {
   text-decoration: underline;
 }
 
+.cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--grey);
+  border-radius: 25px;
+  margin: 30px 5%;
+  padding: 18px;
+}
+
+.cards-container li {
+  margin: 20px;
+  position: relative;
+}
+
 .collapse-container {
-  margin: 0 auto;
+  margin: 50px auto 30px;
+  height: 100%;
 }
 
 .error-content {
@@ -183,6 +269,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
 }
 .error-content h1 {
   font-weight: 700;
