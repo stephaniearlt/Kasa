@@ -1,24 +1,28 @@
-import React from 'react';
-import Header from '../components/Header'; 
-import Banner from '../components/Banner'; 
-import Card from '../components/Card';
-import logements from '../datas/logements.json'; 
-import Footer from '../components/Footer'; 
-import '../styles/css/style.css';
+import React from "react";
+import Banner from "../components/Banner";
+import Card from "../components/Card";
+import logements from "../datas/logements.json";
+
+import "../styles/css/style.css";
 
 const Home = () => {
   return (
     <>
-      <Header />
-      <Banner image="/images/cove.png" text="Chez vous, partout et ailleurs" overlayOpacity={0.6} />
+      <Banner
+        image="/images/cove.png"
+        text="Chez vous, partout et ailleurs"
+        overlayOpacity={0.6}
+      />
       <ul className="cards-container">
         {logements.map((logement) => (
-          <li key={logement.id}>
-            <Card title={logement.title} cover={logement.cover} />
-          </li>
+          <Card
+            key={logement.id}
+            title={logement.title}
+            cover={logement.cover}
+            id={logement.id}
+          />
         ))}
       </ul>
-      <Footer />
     </>
   );
 };

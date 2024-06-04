@@ -14,13 +14,15 @@ const Collapse = ({ title, children }) => {
       <div className="collapse-header">
         <h2>{title}</h2>
         <img
-          src={`${process.env.PUBLIC_URL}/images/${isOpen ? 'chevron-down.svg' : 'chevron-up.svg'}`}
+          src={`${process.env.PUBLIC_URL}/images/chevron-up.svg`}
           alt="Chevron"
-          className="chevron"
+          className={`chevron ${isOpen ? "open" : ""}`}
           onClick={toggleCollapse}
         />
       </div>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      <div className={`collapse-content ${isOpen ? "open" : ""}`}>
+        {children}
+      </div>
     </div>
   );
 };

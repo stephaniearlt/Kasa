@@ -2,11 +2,16 @@
     @include flex-center;
     flex-direction: column;
     height: 100%;
+    padding-bottom: 75px;
 
     h1 {
         font-weight: 700;
         font-size: 18rem;
-        color: var(--main)
+        color: var(--main);
+
+        @include below-or-equal-375px {
+            font-size: 6rem;
+        }
     }
 
     p {
@@ -15,6 +20,11 @@
         color: var(--main);
         padding-top: 80px;
         padding-bottom: 100px;
+
+        @include below-or-equal-375px {
+            font-size: 1.125rem;
+            text-align: center;
+        }
     }
 }
 
@@ -23,4 +33,8 @@
     font-size: 1.125rem;
     text-decoration-line: underline;
     color: black;
+
+    @include below-or-equal-375px {
+        font-size: 0.875rem;
+    }
 }

@@ -1,4 +1,12 @@
 .collapse-container {
-    margin: 50px auto 30px;
-    height: 100%;
+    max-width: 1023px;
+    @include responsive-width(90%);
+    @include flex-center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 40px;
+
+    @include below-or-equal-375px {
+        width: 335px;
+    }
 }

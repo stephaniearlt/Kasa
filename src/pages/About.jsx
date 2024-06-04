@@ -1,14 +1,11 @@
 import React from "react";
-import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
-import Footer from "../components/Footer";
 import "../styles/css/style.css";
 
 const About = () => {
   return (
     <>
-      <Header />
       <Banner image="/images/montains.png" overlayOpacity={0.3} />
       <div className="collapse-container">
         <Collapse title="Fiabilité">
@@ -43,7 +40,6 @@ const About = () => {
           </p>
         </Collapse>
       </div>
-      <Footer />
     </>
   );
 };

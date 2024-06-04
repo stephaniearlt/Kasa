@@ -1,8 +1,16 @@
 .header {
+    @include max-width(1240px);
+    @include responsive-width(90%);
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 5%;
+    padding: 30px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
 .logo-header {
@@ -29,5 +37,23 @@
 
     a.active {
         text-decoration: underline;
+    }
+}
+
+@include below-or-equal-375px {
+    .logo-header {
+        height: 47px;
+    }
+
+    .nav-links {
+
+        li {
+            margin-right: 20px;
+        }
+
+        a {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
     }
 }

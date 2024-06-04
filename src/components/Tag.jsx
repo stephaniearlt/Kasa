@@ -1,10 +1,13 @@
-import React from 'react'
-import '../styles/css/style.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "../styles/css/style.css";
 
-function Tag() {
-  return (
-    <div>A compléter</div>
-  )
-}
+const Tag = ({ label }) => {
+  return <span className="tag">{label}</span>;
+};
 
-export default Tag
+Tag.propTypes = {
+  label: PropTypes.string.isRequired,
+};
+
+export default Tag;

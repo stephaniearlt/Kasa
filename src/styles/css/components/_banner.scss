@@ -1,8 +1,11 @@
 .banner {
+    @include max-width(1240px);
+    @include responsive-width(90%);
+    margin: 0 auto;
     position: relative;
     height: 223px;
-    margin-left: 5%;
-    margin-right: 5%;
+    border-radius: 25px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
 
     img {
         object-fit: cover;
@@ -22,6 +25,26 @@
         transform: translate(-50%, -50%);
         text-align: center;
         z-index: 2;
+
+        .mobile {
+            display: none;
+        }
+
+        @include below-or-equal-375px {
+            font-size: 1.5rem;
+            text-align: left;
+            left: 15px;
+            transform: translateY(-50%);
+            line-height: 1.2;
+
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: inline;
+            }
+        }
     }
 
     .overlay {
@@ -33,5 +56,19 @@
         background-color: black;
         border-radius: 25px;
         z-index: 1;
+    }
+
+    @include below-or-equal-375px {
+        width: calc(100% - 40px);
+        height: 111px;
+        border-radius: 10px;
+
+        img {
+            border-radius: inherit;
+        }
+
+        .overlay {
+            border-radius: inherit;
+        }
     }
 }

@@ -1,13 +1,20 @@
 .cards-container {
+    @include max-width(1240px);
+    @include responsive-width(90%);
+    margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: var(--grey);
     border-radius: 25px;
-    margin: 30px 5%;
-    padding: 18px;
-}
-.cards-container li {
-    margin: 20px;
-    position: relative;
+    padding: 20px;
+
+    @include below-or-equal-375px {
+        background-color: var(--white);
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }

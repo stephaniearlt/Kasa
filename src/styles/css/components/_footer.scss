@@ -1,14 +1,25 @@
 .footer {
+    width: 100%;
+    margin: 0 auto;
     background-color: black;
-    color: white;
+    color: var(--white);
     @include flex-center;
     flex-direction: column;
     padding-top: 50px;
-    border-bottom-width: 10px;
     padding-bottom: 20px;
 }
 
 .logo-footer {
     height: 40px;
     margin-bottom: 30px;
+}
+
+@include below-or-equal-375px {
+    .footer {
+        padding-top: 50px;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+    }
 }
