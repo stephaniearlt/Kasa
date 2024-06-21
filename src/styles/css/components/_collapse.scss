@@ -50,10 +50,12 @@
         font-weight: 400;
         font-size: 1.125rem;
         background-color: var(--grey);
-        padding: 15px;
+        padding: 0 15px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        display: none;
+        overflow: hidden;
+        height: 0;
+        transition: max-height 1s ease, opacity 0.3s ease, padding 0.3s ease;
 
         @include below-or-equal-375px {
             p {
@@ -62,7 +64,16 @@
         }
 
         &.open {
-            display: block;
+            height: auto;
+            padding: 15px 15px;
+        }
+
+        &.open p {
+            animation: fall 0.3s ease forwards;
+        }
+
+        &:not(.open) p {
+            animation: rise 0.3s ease forwards;
         }
     }
 }

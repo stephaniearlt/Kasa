@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/css/style.css";
 
 function Banner({ image, text, overlayOpacity }) {
   return (

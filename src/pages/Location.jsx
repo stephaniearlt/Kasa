@@ -1,17 +1,16 @@
-import React, { Redirect } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
+import { useParams, Navigate } from "react-router-dom";
 import logements from "../datas/logements.json";
 import Slideshow from "../components/Slideshow";
 import Tag from "../components/Tag";
 import Collapse from "../components/Collapse";
-import "../styles/css/style.css";
 
 const Location = () => {
   const { id } = useParams();
   const logement = logements.find((logement) => logement.id === id);
 
   if (!logement) {
-    return <Redirect to="/error-404" />;
+    return <Navigate to="/error-404" />;
   }
 
   const splitName = (name) => {

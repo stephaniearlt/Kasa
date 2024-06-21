@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import "../styles/css/style.css";
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,10 +18,18 @@ const Slideshow = ({ images }) => {
       {images.length > 1 && (
         <>
           <button className="arrow left-arrow" onClick={previousSlide}>
-            ‹
+            <img
+              src={`${process.env.PUBLIC_URL}/images/chevron-left.svg`}
+              alt="Précédent"
+              className="chevron"
+            />
           </button>
           <button className="arrow right-arrow" onClick={nextSlide}>
-            ›
+            <img
+              src={`${process.env.PUBLIC_URL}/images/chevron-right.svg`}
+              alt="Suivant"
+              className="chevron"
+            />
           </button>
         </>
       )}
@@ -37,10 +43,6 @@ const Slideshow = ({ images }) => {
       )}
     </div>
   );
-};
-
-Slideshow.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Slideshow;

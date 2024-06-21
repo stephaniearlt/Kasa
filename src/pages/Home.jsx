@@ -3,8 +3,6 @@ import Banner from "../components/Banner";
 import Card from "../components/Card";
 import logements from "../datas/logements.json";
 
-import "../styles/css/style.css";
-
 const Home = () => {
   return (
     <>

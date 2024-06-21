@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import "../styles/css/style.css";
 
-const Collapse = ({ title, children }) => {
+const Collapse = ({ title, content, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -21,15 +19,20 @@ const Collapse = ({ title, children }) => {
         />
       </div>
       <div className={`collapse-content ${isOpen ? "open" : ""}`}>
-        {children}
+        {children ? (
+          children
+        ) : Array.isArray(content) ? (
+          <ul>
+            {content.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{content}</p>
+        )}
       </div>
     </div>
   );
-};
-
-Collapse.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
 };
 
 export default Collapse;

@@ -6,6 +6,7 @@ import Location from "./pages/Location";
 import Error from "./pages/Error";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./styles/style.scss";
 
 const App = () => {
   return (
