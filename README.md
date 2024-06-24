@@ -39,3 +39,7 @@ Les prototypes Figma permettent de visualiser les animations et les interactions
 
 Utiliser Sass pour générer les styles CSS.
 Intégrer des animations CSS pour le menu déroulant.
+
+## V1 en ligne
+
+Pour découvrir le site en production, suivez ce lien https://kasa-from-arlt.netlify.app/
