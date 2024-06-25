@@ -14,7 +14,7 @@
     margin-bottom: 30px;
 }
 
-@include below-or-equal-375px {
+@include below-768 {
     .footer {
         padding-top: 50px;
     }

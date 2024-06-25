@@ -10,14 +10,9 @@
   max-width: $width;
 }
 
-@mixin responsive-width($width) {
-  @media screen and (min-width: 375px) {
-    width: $width;
-  }
-}
-
-@mixin below-or-equal-375px {
-  @media screen and (max-width: 376px) {
+// Mixin pour les écrans en dessous de 768px
+@mixin below-768 {
+  @media screen and (max-width: 767.98px) {
     @content;
   }
 }

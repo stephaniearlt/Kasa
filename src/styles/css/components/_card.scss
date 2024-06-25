@@ -39,7 +39,7 @@
         z-index: 0;
     }
 
-    @include below-or-equal-375px {
+    @include below-768 {
         width: 335px;
         height: 255px;
         margin: 10px;

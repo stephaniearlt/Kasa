@@ -9,7 +9,7 @@
         font-size: 18rem;
         color: var(--main);
 
-        @include below-or-equal-375px {
+        @include below-768 {
             font-size: 6rem;
         }
     }
@@ -21,7 +21,7 @@
         padding-top: 80px;
         padding-bottom: 100px;
 
-        @include below-or-equal-375px {
+        @include below-768 {
             font-size: 1.125rem;
             text-align: center;
         }
@@ -34,7 +34,7 @@
     text-decoration-line: underline;
     color: black;
 
-    @include below-or-equal-375px {
+    @include below-768 {
         font-size: 0.875rem;
     }
 }

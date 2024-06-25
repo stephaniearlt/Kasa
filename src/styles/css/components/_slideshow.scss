@@ -1,7 +1,7 @@
 .slideshow {
     position: relative;
     @include max-width(1240px);
-    @include responsive-width(90%);
+    width: 90%;
     height: 415px;
     margin: 0 auto;
     overflow: hidden;
@@ -57,7 +57,7 @@
     color: var(--white);
 }
 
-@include below-or-equal-375px {
+@include below-768 {
     .slideshow {
         height: 255px;
         border-radius: 20px;

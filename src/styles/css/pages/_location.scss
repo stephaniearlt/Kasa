@@ -4,12 +4,12 @@
 
 .location-details {
     @include max-width(1240px);
-    @include responsive-width(90%);
+    width: 90%;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
 
-    @include below-or-equal-375px {
+    @include below-768 {
         flex-direction: column;
     }
 }
@@ -23,7 +23,7 @@ h1 {
     font-size: 2.25rem;
     font-weight: 500;
 
-    @include below-or-equal-375px {
+    @include below-768 {
         font-size: 1.125rem;
         padding-bottom: 10px;
     }
@@ -32,7 +32,7 @@ h1 {
 p {
     font-size: 1.125rem;
 
-    @include below-or-equal-375px {
+    @include below-768 {
         font-size: 0.875rem;
         padding-bottom: 10px;
     }
@@ -51,7 +51,7 @@ p {
     align-items: center;
     justify-content: center;
 
-    @include below-or-equal-375px {
+    @include below-768 {
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 100%;
@@ -68,7 +68,7 @@ p {
         font-size: 1.125rem;
         color: var(--main);
 
-        @include below-or-equal-375px {
+        @include below-768 {
             font-size: 0.75rem;
         }
     }
@@ -78,7 +78,7 @@ p {
         height: 64px;
         border-radius: 50%;
 
-        @include below-or-equal-375px {
+        @include below-768 {
             width: 32px;
             height: 32px;
         }
@@ -91,7 +91,7 @@ p {
     margin-top: 10px;
     margin-left: auto;
 
-    @include below-or-equal-375px {
+    @include below-768 {
         font-size: 1.125rem;
         margin-left: 0px;
     }
@@ -103,20 +103,20 @@ p {
 
 .information {
     @include max-width(1240px);
-    @include responsive-width(90%);
+    width: 90%;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
     gap: 50px;
 
-    @include below-or-equal-375px {
+    @include below-768 {
         display: block;
         flex-direction: column;
         margin: 0 auto;
     }
 }
 
-@include below-or-equal-375px {
+@include below-768 {
     .tag {
         font-size: 0.625rem;
     }
