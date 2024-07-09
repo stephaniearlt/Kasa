@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Collapse = ({ title, content, children }) => {
+const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -19,9 +19,7 @@ const Collapse = ({ title, content, children }) => {
         />
       </div>
       <div className={`collapse-content ${isOpen ? "open" : ""}`}>
-        {children ? (
-          children
-        ) : Array.isArray(content) ? (
+        {Array.isArray(content) ? (
           <ul>
             {content.map((item, i) => (
               <li key={i}>{item}</li>

@@ -48,28 +48,25 @@ const Location = () => {
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>
           <div className="rating">
-            {Array.from({ length: 5 }, (_, i) => (
-              <span
-                key={i}
-                className={i < logement.rating ? "filled-star" : ""}
-              >
-                ★
-              </span>
-            ))}
+            {
+              /* création tableau d'une longueur de 5 éléments vides, dont le 1er argument est ignoré */ Array.from(
+                { length: 5 },
+                (_, i) => (
+                  <span
+                    key={i}
+                    className={i < logement.rating ? "filled-star" : ""}
+                  >
+                    ★
+                  </span>
+                )
+              )
+            }
           </div>
         </div>
       </div>
       <div className="information">
-        <Collapse title="Description">
-          <p>{logement.description}</p>
-        </Collapse>
-        <Collapse title="Équipements">
-          <ul>
-            {logement.equipments.map((equipment) => (
-              <li key={equipment}>{equipment}</li>
-            ))}
-          </ul>
-        </Collapse>
+        <Collapse title="Description" content={logement.description} />
+        <Collapse title="Équipements" content={logement.equipments} />
       </div>
     </div>
   );
