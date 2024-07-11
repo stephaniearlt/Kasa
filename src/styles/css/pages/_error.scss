@@ -1,0 +1,40 @@
+.error-content {
+    @include flex-center;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 75px;
+
+    h1 {
+        font-weight: 700;
+        font-size: 18rem;
+        color: var(--main);
+
+        @include below-768 {
+            font-size: 6rem;
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 2.25rem;
+        color: var(--main);
+        padding-top: 80px;
+        padding-bottom: 100px;
+
+        @include below-768 {
+            font-size: 1.125rem;
+            text-align: center;
+        }
+    }
+}
+
+.error-link {
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-decoration-line: underline;
+    color: black;
+
+    @include below-768 {
+        font-size: 0.875rem;
+    }
+}

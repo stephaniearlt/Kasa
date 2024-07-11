@@ -1,0 +1,18 @@
+// Centrage horizontal et vertical des éléments
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Points de rupture réactifs pour les médias
+@mixin max-width($width) {
+  max-width: $width;
+}
+
+// Mixin pour les écrans en dessous de 768px
+@mixin below-768 {
+  @media screen and (max-width: 767.98px) {
+    @content;
+  }
+}

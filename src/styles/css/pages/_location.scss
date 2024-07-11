@@ -1,0 +1,127 @@
+.location-content {
+    height: 100%;
+}
+
+.location-details {
+    @include max-width(1240px);
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include below-768 {
+        flex-direction: column;
+    }
+}
+
+.title-info {
+    flex-grow: 1;
+}
+
+h1 {
+    color: var(--main);
+    font-size: 2.25rem;
+    font-weight: 500;
+
+    @include below-768 {
+        font-size: 1.125rem;
+        padding-bottom: 10px;
+    }
+}
+
+p {
+    font-size: 1.125rem;
+
+    @include below-768 {
+        font-size: 0.875rem;
+        padding-bottom: 10px;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.host-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include below-768 {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.host {
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    span {
+        margin-right: 10px;
+        font-size: 1.125rem;
+        color: var(--main);
+
+        @include below-768 {
+            font-size: 0.75rem;
+        }
+    }
+
+    img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+
+        @include below-768 {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+.rating {
+    font-size: 2.25rem;
+    color: #e3e3e3;
+    margin-top: 10px;
+    margin-left: auto;
+
+    @include below-768 {
+        font-size: 1.125rem;
+        margin-left: 0px;
+    }
+}
+
+.filled-star {
+    color: var(--main);
+}
+
+.information {
+    @include max-width(1240px);
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    @include below-768 {
+        display: block;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
+
+@include below-768 {
+    .tag {
+        font-size: 0.625rem;
+    }
+
+    li {
+        font-size: 0.875rem;
+    }
+}

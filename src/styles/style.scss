@@ -1,0 +1,19 @@
+// Import des styles généraux
+@import './variables';
+@import './mixins';
+@import './global';
+
+// Import des styles spécifiques des composants
+@import '../styles/css/components/banner';
+@import '../styles/css/components/card';
+@import '../styles/css/components/collapse';
+@import '../styles/css/components/footer';
+@import '../styles/css/components/header';
+@import '../styles/css/components/slideshow';
+@import '../styles/css/components/tag';
+
+// Import des styles spécifiques des pages
+@import '../styles/css/pages/home';
+@import '../styles/css/pages/about';
+@import '../styles/css/pages/location';
+@import '../styles/css/pages/error';
